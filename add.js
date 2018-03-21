@@ -1,4 +1,4 @@
-te.prototype.format = function(format) {
+Date.prototype.format = function(format) {
     var o = {
         "M+": this.getMonth() + 1, //month 
         "d+": this.getDate(), //day 
@@ -18,6 +18,6 @@ te.prototype.format = function(format) {
     return format;
 }
 
-let fs = require('fs');
-let time = (new Date()).format("yyyy年MM月dd日 hh:mm:ss");
+var fs = require('fs');
+var time = (new Date()).format("yyyy年MM月dd日 hh:mm:ss");
 fs.appendFileSync('records.txt', `${time}\n\n`);
